@@ -1,6 +1,6 @@
 {
   "name": "@fisch0920/markdown-to-html",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Converts markdown to html.",
   "author": "Travis Fischer <travis@transitivebullsh.it>",
   "license": "MIT",
