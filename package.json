@@ -1,0 +1,65 @@
+{
+  "name": "@fisch0920/markdown-to-html",
+  "version": "0.0.1",
+  "description": "Converts markdown to html.",
+  "author": "Travis Fischer <travis@transitivebullsh.it>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/transitive-bullshit/markdown-to-html.git"
+  },
+  "packageManager": "pnpm@9.15.4",
+  "engines": {
+    "node": ">=18"
+  },
+  "type": "module",
+  "main": "./dist/index.js",
+  "source": "./src/index.ts",
+  "types": "./dist/index.d.ts",
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "clean": "del clean",
+    "prebuild": "run-s clean",
+    "pretest": "run-s build",
+    "test": "run-s test:*",
+    "test:format": "prettier --check \"**/*.{js,ts,tsx}\"",
+    "test:lint": "eslint .",
+    "test:typecheck": "tsc --noEmit",
+    "test:unit": "vitest run",
+    "preinstall": "npx only-allow pnpm"
+  },
+  "dependencies": {
+    "rehype-format": "^5.0.1",
+    "rehype-raw": "^7.0.0",
+    "rehype-stringify": "^10.0.1",
+    "remark-gfm": "^4.0.1",
+    "remark-parse": "^11.0.0",
+    "remark-rehype": "^11.1.1",
+    "unified": "^11.0.5"
+  },
+  "devDependencies": {
+    "@fisch0920/eslint-config": "^1.4.0",
+    "@types/node": "^22.13.9",
+    "del-cli": "^6.0.0",
+    "eslint": "^8.57.1",
+    "npm-run-all2": "^7.0.2",
+    "only-allow": "^1.2.1",
+    "prettier": "^3.5.3",
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.2",
+    "vitest": "3.0.7"
+  }
+}
