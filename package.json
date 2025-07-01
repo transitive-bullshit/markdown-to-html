@@ -8,7 +8,7 @@
     "type": "git",
     "url": "git+https://github.com/transitive-bullshit/markdown-to-html.git"
   },
-  "packageManager": "pnpm@9.15.4",
+  "packageManager": "pnpm@10.12.4",
   "engines": {
     "node": ">=18"
   },
@@ -17,9 +17,6 @@
   "source": "./src/index.ts",
   "types": "./dist/index.d.ts",
   "sideEffects": false,
-  "publishConfig": {
-    "access": "public"
-  },
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -47,19 +44,23 @@
     "rehype-stringify": "^10.0.1",
     "remark-gfm": "^4.0.1",
     "remark-parse": "^11.0.0",
-    "remark-rehype": "^11.1.1",
+    "remark-rehype": "^11.1.2",
     "unified": "^11.0.5"
   },
   "devDependencies": {
-    "@fisch0920/eslint-config": "^1.4.0",
-    "@types/node": "^22.13.9",
+    "@fisch0920/config": "^1.1.4",
+    "@types/node": "^24.0.8",
     "del-cli": "^6.0.0",
-    "eslint": "^8.57.1",
-    "npm-run-all2": "^7.0.2",
+    "eslint": "^9.30.0",
+    "npm-run-all2": "^8.0.4",
     "only-allow": "^1.2.1",
-    "prettier": "^3.5.3",
-    "tsup": "^8.4.0",
-    "typescript": "^5.8.2",
-    "vitest": "3.0.7"
+    "prettier": "^3.6.2",
+    "tsup": "^8.5.0",
+    "typescript": "^5.8.3",
+    "vitest": "3.2.4"
+  },
+  "prettier": "@fisch0920/config/prettier",
+  "publishConfig": {
+    "access": "public"
   }
 }
