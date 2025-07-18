@@ -35,8 +35,7 @@
     "test:format": "prettier --check \"**/*.{js,ts,tsx}\"",
     "test:lint": "eslint .",
     "test:typecheck": "tsc --noEmit",
-    "test:unit": "vitest run",
-    "preinstall": "npx only-allow pnpm"
+    "test:unit": "vitest run"
   },
   "dependencies": {
     "rehype-format": "^5.0.1",
@@ -53,7 +52,6 @@
     "del-cli": "^6.0.0",
     "eslint": "^9.30.0",
     "npm-run-all2": "^8.0.4",
-    "only-allow": "^1.2.1",
     "prettier": "^3.6.2",
     "tsup": "^8.5.0",
     "typescript": "^5.8.3",
